@@ -3,5 +3,9 @@ node('maven'){
     stage('Checkout'){
         echo "Downloading the source code"
         git credentialsId: 'github_id', url: 'https://github.com/sohailyu/simple-java-maven-app'
-  }
-}        
+    }
+    stage('Execute Test Cases'){
+        echo "Test Execution"
+        sh "$mvnHome/bin/mvn clean test"
+    }
+}   
