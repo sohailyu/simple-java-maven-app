@@ -8,6 +8,8 @@ node('maven'){
         echo "Test Execution"
         sh "$mvnHome/bin/mvn clean test"
 	archiveArtifacts allowEmptyArchive: true, artifacts: 'target/surefire-reports/*'
+	junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+
 
     }
 }   
