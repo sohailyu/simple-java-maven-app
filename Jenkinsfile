@@ -7,7 +7,7 @@ node('maven'){
     stage('Execute Test Cases'){
         echo "Test Execution"
         sh "$mvnHome/bin/mvn clean test"
-	archiveArtifacts allowEmptyArchive: true, artifacts: 'target/surefire-reports'/*'
+	archiveArtifacts allowEmptyArchive: true, artifacts: 'target/surefire-reports'
 
     }
 }   
