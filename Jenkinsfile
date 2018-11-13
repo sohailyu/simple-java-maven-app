@@ -1,4 +1,4 @@
-node('amazon'){
+node('newnode'){
     def mvnHome = tool name: 'maven360', type: 'maven'
     stage('Checkout'){
         echo "Downloading the source code"
