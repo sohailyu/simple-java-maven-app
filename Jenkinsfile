@@ -8,3 +8,5 @@ node('maven'){
     echo " Building the job "
     sh "${mvnHome}/bin/mvn/ clean package"
     }
+    
+}
